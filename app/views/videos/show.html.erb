@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @video.title %>
+</p>
+
+<div class="thumbnail-div" >
+  <%= image_tag(@video.thumbnail, :class => "thumbnail_image_tag") %>
+</div>
+<div class="video-div" >
+  <%= video_tag(url_for(@video.clip), :class => "video_image_tag", :controls => true) %>
+</div>
+
+
+
+<p>
+  <strong>Description:</strong>
+  <%= @video.description %>
+</p>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
